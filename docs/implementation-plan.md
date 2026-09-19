@@ -192,9 +192,16 @@
 - [x] выполнена визуальная сверка с архитектурой публичного сайта и моделью нескольких сеансов;
 - [ ] уточнена отличительная визуальная система Перми и проверено фактическое применение выбранных шрифтов;
 - [ ] добавлены mobile-макеты каталога, фильтров и страницы события;
-- [ ] спроектированы loading, empty, error, no-results, cancelled и postponed состояния;
-- [ ] дизайн перенесён в доступные Svelte-компоненты с keyboard focus и reduced-motion;
+- [x] спроектированы loading, empty, error, no-results, cancelled и postponed состояния;
+- [x] дизайн перенесён в доступные Svelte-компоненты с keyboard focus и reduced-motion;
 - [ ] каталог подключён к PostgreSQL через публичный Fastify API.
+
+19 сентября 2026: страницы `/`, `/events` и `/events/[slug]` свёрстаны по `design/web.pen`
+и работают на типизированных моках (`apps/web/src/lib/data/`), чьи DTO повторяют контракты
+будущего публичного API. Реализованы фильтры по дате/категории/цене, поиск, пагинация,
+empty/error-состояния, статусы сеансов cancelled/postponed и responsive-вёрстка.
+Критерий «данные из PostgreSQL, а не mock» остаётся открытым до вертикального среза
+`packages/db` → `apps/api` → `apps/web` (дизайн-спека: `docs/superpowers/specs/2026-09-19-demo-catalog-design.md`).
 
 ### Приложения и пакеты
 

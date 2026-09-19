@@ -1,0 +1,103 @@
+@import "@fontsource-variable/newsreader";
+@import "@fontsource-variable/funnel-sans";
+@import "@fontsource/geist/400.css";
+@import "@fontsource/geist/500.css";
+@import "@fontsource/geist/600.css";
+@import "@fontsource/geist-mono/400.css";
+@import "@fontsource/geist-mono/500.css";
+
+:root {
+  /* Палитра из design/web.pen */
+  --surface-primary: #f5f2e9;
+  --surface-secondary: #e8e4d8;
+  --foreground-primary: #2d2926;
+  --foreground-secondary: #5e5954;
+  --border-subtle: #dcd8cb;
+  --accent-primary: #b94329;
+  --accent-deep: #7c2d1d;
+  --accent-soft: #f0d8cb;
+  --success: #2f6b4f;
+
+  --font-heading: "Newsreader Variable", Georgia, "Times New Roman", serif;
+  --font-body: "Funnel Sans Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-caption: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-data: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --space-s: 8px;
+  --space-m: 16px;
+  --space-l: 24px;
+  --space-xl: 40px;
+  --radius-sm: 4px;
+
+  --page-padding: 96px;
+  --content-max: 1440px;
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --page-padding: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --page-padding: 18px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--surface-primary);
+  color: var(--foreground-primary);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+input {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
