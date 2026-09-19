@@ -38,9 +38,15 @@ export interface EventImage {
   readonly alt: string;
 }
 
+export interface GeoPoint {
+  readonly lon: number;
+  readonly lat: number;
+}
+
 export interface VenueSummary {
   readonly name: string;
   readonly address: string;
+  readonly location: GeoPoint;
 }
 
 export interface EventListItem {

@@ -112,6 +112,11 @@
           <p class="venue-label">Площадка</p>
           <p class="venue-name">{event.venue.name}</p>
           <p class="venue-address">{event.venue.address}</p>
+          {#await import("$lib/components/VenueMap.svelte")}
+            <div class="map-placeholder" aria-hidden="true"></div>
+          {:then { default: VenueMap }}
+            <VenueMap venue={event.venue} />
+          {/await}
         </div>
       {/if}
 
@@ -364,6 +369,13 @@
     margin: 0;
     color: var(--foreground-secondary);
     font-size: 13px;
+  }
+
+  .map-placeholder {
+    height: 240px;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    background: var(--surface-secondary);
   }
 
   .organizer-link {
