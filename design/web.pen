@@ -1,0 +1,3764 @@
+{
+  "version": "2.17",
+  "children": [
+    {
+      "type": "frame",
+      "id": "BG7Wg",
+      "x": 0,
+      "y": 0,
+      "name": "Component / Header",
+      "reusable": true,
+      "width": 1440,
+      "height": 76,
+      "fill": "$surface.primary",
+      "stroke": "$border.subtle",
+      "strokeWidth": {
+        "bottom": 1
+      },
+      "padding": [
+        0,
+        64
+      ],
+      "justifyContent": "space_between",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "Tby0Y",
+          "name": "Brand",
+          "gap": 10,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "wV3lf",
+              "name": "Brand Mark",
+              "width": 36,
+              "height": 36,
+              "fill": "$accent.primary",
+              "cornerRadius": 18,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "DbTLJ",
+                  "name": "Brand Letter",
+                  "fill": "#FFFFFF",
+                  "content": "П",
+                  "fontFamily": "$font.heading",
+                  "fontSize": 22,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "T7jrWL",
+              "name": "Brand Name",
+              "fill": "$foreground.primary",
+              "content": "Пермь.События",
+              "fontFamily": "$font.heading",
+              "fontSize": 22,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "pX7CM",
+          "name": "Navigation",
+          "gap": 30,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "nApyp",
+              "name": "Афиша",
+              "fill": "$accent.primary",
+              "content": "Афиша",
+              "fontFamily": "$font.body",
+              "fontSize": 15,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "RwaMq",
+              "name": "Сегодня",
+              "fill": "$foreground.primary",
+              "content": "Сегодня",
+              "fontFamily": "$font.body",
+              "fontSize": 15
+            },
+            {
+              "type": "text",
+              "id": "NP2Ao",
+              "name": "Выходные",
+              "fill": "$foreground.primary",
+              "content": "Выходные",
+              "fontFamily": "$font.body",
+              "fontSize": 15
+            },
+            {
+              "type": "text",
+              "id": "R2bSFJ",
+              "name": "Места",
+              "fill": "$foreground.primary",
+              "content": "Места",
+              "fontFamily": "$font.body",
+              "fontSize": 15
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "DDT0f",
+          "name": "Header Tools",
+          "gap": 12,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "QUMx4",
+              "name": "City Selector",
+              "cornerRadius": 4,
+              "stroke": "$border.subtle",
+              "strokeWidth": 1,
+              "gap": 6,
+              "padding": [
+                8,
+                12
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "WWBfk",
+                  "name": "Map Pin",
+                  "width": 16,
+                  "height": 16,
+                  "icon": "map-pin",
+                  "library": "lucide",
+                  "fill": "$foreground.primary"
+                },
+                {
+                  "type": "text",
+                  "id": "q9kHS",
+                  "name": "City",
+                  "fill": "$foreground.primary",
+                  "content": "Пермь",
+                  "fontFamily": "$font.body",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "icon",
+              "id": "nAshC",
+              "name": "Search",
+              "width": 21,
+              "height": 21,
+              "icon": "search",
+              "library": "lucide",
+              "fill": "$foreground.primary"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "np6vQ",
+      "x": 0,
+      "y": 180,
+      "name": "Public / Home",
+      "clip": true,
+      "width": 1440,
+      "height": 1280,
+      "fill": "$surface.primary",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "y173yD",
+          "type": "ref",
+          "ref": "BG7Wg",
+          "name": "Header",
+          "width": "fill_container"
+        },
+        {
+          "type": "frame",
+          "id": "qGrUB",
+          "name": "Hero",
+          "width": "fill_container",
+          "height": 480,
+          "gap": 56,
+          "padding": [
+            56,
+            96,
+            48,
+            96
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "PTrWN",
+              "name": "Hero Copy",
+              "width": 520,
+              "layout": "vertical",
+              "gap": 22,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "CZYKp",
+                  "name": "Eyebrow",
+                  "fill": "$accent.primary",
+                  "content": "АФИША ПЕРМИ · 19 СЕНТЯБРЯ",
+                  "fontFamily": "$font.data",
+                  "fontSize": 12,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1.2
+                },
+                {
+                  "type": "text",
+                  "id": "uJMkq",
+                  "name": "Hero Title",
+                  "fill": "$foreground.primary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Город, в котором всегда что-то происходит",
+                  "lineHeight": 1.02,
+                  "fontFamily": "$font.heading",
+                  "fontSize": 62,
+                  "fontWeight": "500",
+                  "letterSpacing": -1.2
+                },
+                {
+                  "type": "text",
+                  "id": "I8FrE",
+                  "name": "Hero Description",
+                  "fill": "$foreground.secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 480,
+                  "content": "Концерты, спектакли, выставки и городские события — в одной афише. Выбирайте настроение, а мы покажем, куда идти.",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font.body",
+                  "fontSize": 18,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "t6clSU",
+                  "name": "Hero Actions",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "cWRMI",
+                      "name": "Primary Action",
+                      "height": 48,
+                      "fill": "$accent.primary",
+                      "cornerRadius": 4,
+                      "gap": 9,
+                      "padding": [
+                        0,
+                        20
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Kwlh4",
+                          "name": "Primary Label",
+                          "fill": "#FFFFFF",
+                          "content": "Смотреть афишу",
+                          "fontFamily": "$font.body",
+                          "fontSize": 15,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "icon",
+                          "id": "XjGUP",
+                          "name": "Arrow",
+                          "width": 18,
+                          "height": 18,
+                          "icon": "arrow-right",
+                          "library": "lucide",
+                          "fill": "#FFFFFF"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "TFQts",
+                      "name": "Secondary Action",
+                      "height": 48,
+                      "cornerRadius": 4,
+                      "stroke": "$foreground.primary",
+                      "strokeWidth": 1,
+                      "padding": [
+                        0,
+                        18
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "BBOKO",
+                          "name": "Secondary Label",
+                          "fill": "$foreground.primary",
+                          "content": "Что сегодня?",
+                          "fontFamily": "$font.body",
+                          "fontSize": 15,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "W0T4tY",
+              "name": "Perm Hero Image",
+              "metadata": {
+                "type": "unsplash",
+                "username": "cj580",
+                "link": "https://unsplash.com/@cj580",
+                "author": "Chris Johnson"
+              },
+              "clip": true,
+              "width": "fill_container",
+              "height": 360,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "https://images.unsplash.com/photo-1660492038731-f6f32fd8b399?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk4MTQ4OTl8&ixlib=rb-4.1.0&q=80&w=1080",
+                "mode": "fill"
+              },
+              "cornerRadius": 4,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "wJzd8",
+                  "layoutPosition": "absolute",
+                  "x": 24,
+                  "y": 284,
+                  "name": "Image Badge",
+                  "fill": "#F5F2E9EE",
+                  "cornerRadius": 4,
+                  "gap": 8,
+                  "padding": [
+                    10,
+                    14
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "AWFVO",
+                      "name": "Location Icon",
+                      "width": 16,
+                      "height": 16,
+                      "icon": "landmark",
+                      "library": "lucide",
+                      "fill": "$accent.primary"
+                    },
+                    {
+                      "type": "text",
+                      "id": "FqDGa",
+                      "name": "Location Text",
+                      "fill": "$foreground.primary",
+                      "content": "Пермь — Камская набережная",
+                      "fontFamily": "$font.caption",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Xe2pl",
+          "name": "Date Navigator",
+          "width": "fill_container",
+          "height": 76,
+          "stroke": "$border.subtle",
+          "strokeWidth": {
+            "top": 1,
+            "bottom": 1
+          },
+          "gap": 8,
+          "padding": [
+            0,
+            96
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "i7NkP",
+              "name": "Сегодня",
+              "height": 42,
+              "fill": "$foreground.primary",
+              "cornerRadius": 4,
+              "gap": 8,
+              "padding": [
+                0,
+                16
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "O4oqDK",
+                  "name": "Сегодня Label",
+                  "fill": "#FFFFFF",
+                  "content": "Сегодня",
+                  "fontFamily": "$font.body",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "w0CwD",
+                  "name": "Сегодня Date",
+                  "fill": "#FFFFFFAA",
+                  "content": "19 сен",
+                  "fontFamily": "$font.data",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Bs6cX",
+              "name": "Завтра",
+              "height": 42,
+              "fill": "$surface.primary",
+              "cornerRadius": 4,
+              "stroke": "$border.subtle",
+              "strokeWidth": 1,
+              "gap": 8,
+              "padding": [
+                0,
+                16
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "GWKBL",
+                  "name": "Завтра Label",
+                  "fill": "$foreground.primary",
+                  "content": "Завтра",
+                  "fontFamily": "$font.body",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "qhH5X",
+                  "name": "Завтра Date",
+                  "fill": "$foreground.secondary",
+                  "content": "20 сен",
+                  "fontFamily": "$font.data",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "aR8tl",
+              "name": "Выходные",
+              "height": 42,
+              "fill": "$surface.primary",
+              "cornerRadius": 4,
+              "stroke": "$border.subtle",
+              "strokeWidth": 1,
+              "gap": 8,
+              "padding": [
+                0,
+                16
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "g4vXj",
+                  "name": "Выходные Label",
+                  "fill": "$foreground.primary",
+                  "content": "Выходные",
+                  "fontFamily": "$font.body",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "P1W3k",
+                  "name": "Выходные Date",
+                  "fill": "$foreground.secondary",
+                  "content": "21–22 сен",
+                  "fontFamily": "$font.data",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "KnwG1",
+              "name": "На неделе",
+              "height": 42,
+              "fill": "$surface.primary",
+              "cornerRadius": 4,
+              "stroke": "$border.subtle",
+              "strokeWidth": 1,
+              "gap": 8,
+              "padding": [
+                0,
+                16
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "lvNAI",
+                  "name": "На неделе Label",
+                  "fill": "$foreground.primary",
+                  "content": "На неделе",
+                  "fontFamily": "$font.body",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "bac4B",
+                  "name": "На неделе Date",
+                  "fill": "$foreground.secondary",
+                  "content": "23–27 сен",
+                  "fontFamily": "$font.data",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "sevcr",
+              "name": "Category Link",
+              "height": 42,
+              "gap": 8,
+              "padding": [
+                0,
+                16
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "hcJ5X",
+                  "name": "All Categories",
+                  "fill": "$accent.primary",
+                  "content": "Все категории",
+                  "fontFamily": "$font.body",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "icon",
+                  "id": "x05qzH",
+                  "name": "Category Arrow",
+                  "width": 16,
+                  "height": 16,
+                  "icon": "arrow-up-right",
+                  "library": "lucide",
+                  "fill": "$accent.primary"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "LccIF",
+          "name": "Featured Events",
+          "width": "fill_container",
+          "height": 550,
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            42,
+            96
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "ZQvfn",
+              "name": "Section Header",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "end",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "t4x8i",
+                  "name": "Section Title Group",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "wczKp",
+                      "name": "Section Kicker",
+                      "fill": "$accent.primary",
+                      "content": "РЕДАКЦИОННАЯ ПОДБОРКА",
+                      "fontFamily": "$font.data",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "text",
+                      "id": "ldJ2M",
+                      "name": "Section Title",
+                      "fill": "$foreground.primary",
+                      "content": "Главное в городе",
+                      "fontFamily": "$font.heading",
+                      "fontSize": 38,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "r1lkv2",
+                  "name": "View All",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "njMJj",
+                      "name": "View All Label",
+                      "fill": "$foreground.primary",
+                      "content": "Вся афиша",
+                      "fontFamily": "$font.body",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "icon",
+                      "id": "wAMYM",
+                      "name": "View All Arrow",
+                      "width": 17,
+                      "height": 17,
+                      "icon": "arrow-right",
+                      "library": "lucide",
+                      "fill": "$foreground.primary"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Kv0t5",
+              "name": "Event Cards",
+              "width": "fill_container",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "JhhEu",
+                  "name": "Event / Горе от ума",
+                  "width": "fill_container",
+                  "height": 398,
+                  "layout": "vertical",
+                  "gap": 14,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "gYH0X",
+                      "name": "Event Image",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "neonwangphotography",
+                        "link": "https://unsplash.com/@neonwangphotography",
+                        "author": "Neon Wang"
+                      },
+                      "clip": true,
+                      "width": "fill_container",
+                      "height": 238,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1785812945362-f616d7761e34?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk4MTQ5Mjd8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "PMiFO",
+                          "layoutPosition": "absolute",
+                          "x": 14,
+                          "y": 14,
+                          "name": "Category Badge",
+                          "fill": "#F5F2E9EE",
+                          "cornerRadius": 4,
+                          "padding": [
+                            7,
+                            9
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "tD4Qc",
+                              "name": "Category",
+                              "fill": "$foreground.primary",
+                              "content": "ТЕАТР",
+                              "fontFamily": "$font.data",
+                              "fontSize": 10,
+                              "fontWeight": "normal",
+                              "letterSpacing": 0.8
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "vFRu1",
+                      "name": "Card Meta",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "ShN8L",
+                          "name": "Date",
+                          "fill": "$accent.primary",
+                          "content": "19 сентября · 19:00",
+                          "fontFamily": "$font.data",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "EEjd2",
+                          "name": "Price",
+                          "fill": "$foreground.secondary",
+                          "content": "от 700 ₽",
+                          "fontFamily": "$font.data",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "lZQUp",
+                      "name": "Event Title",
+                      "fill": "$foreground.primary",
+                      "content": "Горе от ума",
+                      "fontFamily": "$font.heading",
+                      "fontSize": 26,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Y76Nz",
+                      "name": "Place",
+                      "gap": 6,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "V3KkvO",
+                          "name": "Place Icon",
+                          "width": 15,
+                          "height": 15,
+                          "icon": "map-pin",
+                          "library": "lucide",
+                          "fill": "$foreground.secondary"
+                        },
+                        {
+                          "type": "text",
+                          "id": "a7RZEH",
+                          "name": "Place Name",
+                          "fill": "$foreground.secondary",
+                          "content": "Театр-Театр",
+                          "fontFamily": "$font.body",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "UooFy",
+                  "name": "Event / Пермские боги",
+                  "width": "fill_container",
+                  "height": 398,
+                  "layout": "vertical",
+                  "gap": 14,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "cWfCX",
+                      "name": "Event Image",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "asfotosde1enorme",
+                        "link": "https://unsplash.com/@asfotosde1enorme",
+                        "author": "Rui Alves"
+                      },
+                      "clip": true,
+                      "width": "fill_container",
+                      "height": 238,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1658232630877-6a279285a107?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk4MTQ5Mjh8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "fEdfE",
+                          "layoutPosition": "absolute",
+                          "x": 14,
+                          "y": 14,
+                          "name": "Category Badge",
+                          "fill": "#F5F2E9EE",
+                          "cornerRadius": 4,
+                          "padding": [
+                            7,
+                            9
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "cxvXt",
+                              "name": "Category",
+                              "fill": "$foreground.primary",
+                              "content": "ВЫСТАВКА",
+                              "fontFamily": "$font.data",
+                              "fontSize": 10,
+                              "fontWeight": "normal",
+                              "letterSpacing": 0.8
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "vpbG5",
+                      "name": "Card Meta",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "y9TKRy",
+                          "name": "Date",
+                          "fill": "$accent.primary",
+                          "content": "до 30 ноября",
+                          "fontFamily": "$font.data",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "wCjeG",
+                          "name": "Price",
+                          "fill": "$foreground.secondary",
+                          "content": "от 300 ₽",
+                          "fontFamily": "$font.data",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "Z9JPF",
+                      "name": "Event Title",
+                      "fill": "$foreground.primary",
+                      "content": "Пермские боги",
+                      "fontFamily": "$font.heading",
+                      "fontSize": 26,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "zG98w",
+                      "name": "Place",
+                      "gap": 6,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "QGQ8H",
+                          "name": "Place Icon",
+                          "width": 15,
+                          "height": 15,
+                          "icon": "map-pin",
+                          "library": "lucide",
+                          "fill": "$foreground.secondary"
+                        },
+                        {
+                          "type": "text",
+                          "id": "sJSX6",
+                          "name": "Place Name",
+                          "fill": "$foreground.secondary",
+                          "content": "Пермская галерея",
+                          "fontFamily": "$font.body",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "SmOrC",
+                  "name": "Event / Симфония над Камой",
+                  "width": "fill_container",
+                  "height": 398,
+                  "layout": "vertical",
+                  "gap": 14,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "x4LCdD",
+                      "name": "Event Image",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "shnautsher",
+                        "link": "https://unsplash.com/@shnautsher",
+                        "author": "Myznik Egor"
+                      },
+                      "clip": true,
+                      "width": "fill_container",
+                      "height": 238,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1770101516572-d8d85d392d75?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk4MTQ5Mjl8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "mqB2M",
+                          "layoutPosition": "absolute",
+                          "x": 14,
+                          "y": 14,
+                          "name": "Category Badge",
+                          "fill": "#F5F2E9EE",
+                          "cornerRadius": 4,
+                          "padding": [
+                            7,
+                            9
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "g3Yd9",
+                              "name": "Category",
+                              "fill": "$foreground.primary",
+                              "content": "КОНЦЕРТ",
+                              "fontFamily": "$font.data",
+                              "fontSize": 10,
+                              "fontWeight": "normal",
+                              "letterSpacing": 0.8
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "vHqxI",
+                      "name": "Card Meta",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "pF6VY",
+                          "name": "Date",
+                          "fill": "$accent.primary",
+                          "content": "21 сентября · 18:00",
+                          "fontFamily": "$font.data",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "T2dTg",
+                          "name": "Price",
+                          "fill": "$success",
+                          "content": "Бесплатно",
+                          "fontFamily": "$font.data",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "iPkNl",
+                      "name": "Event Title",
+                      "fill": "$foreground.primary",
+                      "content": "Симфония над Камой",
+                      "fontFamily": "$font.heading",
+                      "fontSize": 26,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "coAbE",
+                      "name": "Place",
+                      "gap": 6,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "h5RHX",
+                          "name": "Place Icon",
+                          "width": 15,
+                          "height": 15,
+                          "icon": "map-pin",
+                          "library": "lucide",
+                          "fill": "$foreground.secondary"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Y7PPZ",
+                          "name": "Place Name",
+                          "fill": "$foreground.secondary",
+                          "content": "Набережная Камы",
+                          "fontFamily": "$font.body",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "g14ja",
+          "name": "Footer",
+          "width": "fill_container",
+          "height": 98,
+          "fill": "$foreground.primary",
+          "padding": [
+            0,
+            96
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "SIvJz",
+              "name": "Footer Brand",
+              "fill": "#FFFFFF",
+              "content": "Пермь.События",
+              "fontFamily": "$font.heading",
+              "fontSize": 22,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "r66QK",
+              "name": "Footer Note",
+              "fill": "#FFFFFFAA",
+              "content": "Единая афиша Перми · данные обновляются ежедневно",
+              "fontFamily": "$font.caption",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "XPR9A",
+              "name": "Social Links",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "x3NKu",
+                  "name": "Telegram",
+                  "fill": "#FFFFFF",
+                  "content": "Telegram",
+                  "fontFamily": "$font.body",
+                  "fontSize": 13,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "DEgbz",
+                  "name": "MAX",
+                  "fill": "#FFFFFF",
+                  "content": "MAX",
+                  "fontFamily": "$font.body",
+                  "fontSize": 13,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "H6jvUu",
+      "x": 1520,
+      "y": 180,
+      "name": "Public / Catalog",
+      "clip": true,
+      "width": 1440,
+      "height": 1120,
+      "fill": "$surface.primary",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "P4n5vu",
+          "type": "ref",
+          "ref": "BG7Wg",
+          "name": "Header",
+          "width": "fill_container"
+        },
+        {
+          "type": "frame",
+          "id": "ZMBJ8",
+          "name": "Catalog Intro",
+          "width": "fill_container",
+          "height": 220,
+          "layout": "vertical",
+          "gap": 18,
+          "padding": [
+            42,
+            96,
+            28,
+            96
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "ZuDmD",
+              "name": "Catalog Kicker",
+              "fill": "$accent.primary",
+              "content": "ПЕРМЬ · СЕНТЯБРЬ 2026",
+              "fontFamily": "$font.data",
+              "fontSize": 11,
+              "fontWeight": "normal",
+              "letterSpacing": 1.1
+            },
+            {
+              "type": "frame",
+              "id": "fqkYJ",
+              "name": "Catalog Title Row",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "end",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "VUT1t",
+                  "name": "Catalog Title",
+                  "fill": "$foreground.primary",
+                  "content": "Афиша событий",
+                  "fontFamily": "$font.heading",
+                  "fontSize": 52,
+                  "fontWeight": "500",
+                  "letterSpacing": -0.6
+                },
+                {
+                  "type": "text",
+                  "id": "YSdAc",
+                  "name": "Catalog Count",
+                  "fill": "$foreground.secondary",
+                  "content": "128 событий",
+                  "fontFamily": "$font.data",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Zp29V",
+              "name": "Search Field",
+              "width": "fill_container",
+              "height": 46,
+              "fill": "#FFFFFF88",
+              "cornerRadius": 4,
+              "stroke": "$border.subtle",
+              "strokeWidth": 1,
+              "gap": 10,
+              "padding": [
+                0,
+                14
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "bI7Yv",
+                  "name": "Search Icon",
+                  "width": 18,
+                  "height": 18,
+                  "icon": "search",
+                  "library": "lucide",
+                  "fill": "$foreground.secondary"
+                },
+                {
+                  "type": "text",
+                  "id": "qd3Xc",
+                  "name": "Search Placeholder",
+                  "fill": "$foreground.secondary",
+                  "content": "Найти концерт, выставку, спектакль или место",
+                  "fontFamily": "$font.body",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Epsxa",
+          "name": "Catalog Body",
+          "width": "fill_container",
+          "height": "fill_container",
+          "gap": 32,
+          "padding": [
+            24,
+            96,
+            48,
+            96
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "dlZ2U",
+              "name": "Filters",
+              "width": 248,
+              "height": "fill_container",
+              "stroke": "$border.subtle",
+              "strokeWidth": {
+                "right": 1
+              },
+              "layout": "vertical",
+              "gap": 28,
+              "padding": [
+                0,
+                24,
+                0,
+                0
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "wUjms",
+                  "name": "Filter Heading",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "PSWnX",
+                      "name": "Filter Title",
+                      "fill": "$foreground.primary",
+                      "content": "Фильтры",
+                      "fontFamily": "$font.heading",
+                      "fontSize": 24,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "AmkL7",
+                      "name": "Reset",
+                      "fill": "$accent.primary",
+                      "content": "Сбросить",
+                      "fontFamily": "$font.caption",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "IaApD",
+                  "name": "Дата Filter",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ajlkG",
+                      "name": "Дата",
+                      "fill": "$foreground.primary",
+                      "content": "Дата",
+                      "fontFamily": "$font.caption",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "M5Ook",
+                      "name": "Сегодня",
+                      "gap": 9,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "eyHgH",
+                          "name": "Checkbox",
+                          "width": 17,
+                          "height": 17,
+                          "fill": "$accent.primary",
+                          "cornerRadius": 4,
+                          "stroke": "$accent.primary",
+                          "strokeWidth": 1,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "eYJ4E",
+                              "name": "Check",
+                              "width": 12,
+                              "height": 12,
+                              "icon": "check",
+                              "library": "lucide",
+                              "fill": "#FFFFFF"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "wP5oD",
+                          "name": "Option",
+                          "fill": "$foreground.primary",
+                          "content": "Сегодня",
+                          "fontFamily": "$font.body",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "I4kVT",
+                      "name": "Завтра",
+                      "gap": 9,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "FOuaI",
+                          "name": "Checkbox",
+                          "width": 17,
+                          "height": 17,
+                          "fill": "$surface.primary",
+                          "cornerRadius": 4,
+                          "stroke": "$border.subtle",
+                          "strokeWidth": 1,
+                          "justifyContent": "center",
+                          "alignItems": "center"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Qvz3A",
+                          "name": "Option",
+                          "fill": "$foreground.primary",
+                          "content": "Завтра",
+                          "fontFamily": "$font.body",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "pnzLm",
+                      "name": "Выходные",
+                      "gap": 9,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "lkGZj",
+                          "name": "Checkbox",
+                          "width": 17,
+                          "height": 17,
+                          "fill": "$surface.primary",
+                          "cornerRadius": 4,
+                          "stroke": "$border.subtle",
+                          "strokeWidth": 1,
+                          "justifyContent": "center",
+                          "alignItems": "center"
+                        },
+                        {
+                          "type": "text",
+                          "id": "zd9I0",
+                          "name": "Option",
+                          "fill": "$foreground.primary",
+                          "content": "Выходные",
+                          "fontFamily": "$font.body",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "rwAzn",
+                  "name": "Категория Filter",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "GT2ES",
+                      "name": "Категория",
+                      "fill": "$foreground.primary",
+                      "content": "Категория",
+                      "fontFamily": "$font.caption",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Na0RP",
+                      "name": "Концерты",
+                      "gap": 9,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "jpws0",
+                          "name": "Checkbox",
+                          "width": 17,
+                          "height": 17,
+                          "fill": "$surface.primary",
+                          "cornerRadius": 4,
+                          "stroke": "$border.subtle",
+                          "strokeWidth": 1,
+                          "justifyContent": "center",
+                          "alignItems": "center"
+                        },
+                        {
+                          "type": "text",
+                          "id": "H0vqNj",
+                          "name": "Option",
+                          "fill": "$foreground.primary",
+                          "content": "Концерты",
+                          "fontFamily": "$font.body",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "By9CC",
+                      "name": "Театр",
+                      "gap": 9,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "GhNWC",
+                          "name": "Checkbox",
+                          "width": 17,
+                          "height": 17,
+                          "fill": "$surface.primary",
+                          "cornerRadius": 4,
+                          "stroke": "$border.subtle",
+                          "strokeWidth": 1,
+                          "justifyContent": "center",
+                          "alignItems": "center"
+                        },
+                        {
+                          "type": "text",
+                          "id": "w5gk0",
+                          "name": "Option",
+                          "fill": "$foreground.primary",
+                          "content": "Театр",
+                          "fontFamily": "$font.body",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "U6kTaV",
+                      "name": "Выставки",
+                      "gap": 9,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "DaNe4",
+                          "name": "Checkbox",
+                          "width": 17,
+                          "height": 17,
+                          "fill": "$surface.primary",
+                          "cornerRadius": 4,
+                          "stroke": "$border.subtle",
+                          "strokeWidth": 1,
+                          "justifyContent": "center",
+                          "alignItems": "center"
+                        },
+                        {
+                          "type": "text",
+                          "id": "MniV3",
+                          "name": "Option",
+                          "fill": "$foreground.primary",
+                          "content": "Выставки",
+                          "fontFamily": "$font.body",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "YwRJS",
+                      "name": "Детям",
+                      "gap": 9,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "Ntd4i",
+                          "name": "Checkbox",
+                          "width": 17,
+                          "height": 17,
+                          "fill": "$surface.primary",
+                          "cornerRadius": 4,
+                          "stroke": "$border.subtle",
+                          "strokeWidth": 1,
+                          "justifyContent": "center",
+                          "alignItems": "center"
+                        },
+                        {
+                          "type": "text",
+                          "id": "TiwUZ",
+                          "name": "Option",
+                          "fill": "$foreground.primary",
+                          "content": "Детям",
+                          "fontFamily": "$font.body",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "mVPGe",
+                  "name": "Цена Filter",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "WAY4B",
+                      "name": "Цена",
+                      "fill": "$foreground.primary",
+                      "content": "Цена",
+                      "fontFamily": "$font.caption",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Gy0q6",
+                      "name": "Бесплатно",
+                      "gap": 9,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "euHPP",
+                          "name": "Checkbox",
+                          "width": 17,
+                          "height": 17,
+                          "fill": "$surface.primary",
+                          "cornerRadius": 4,
+                          "stroke": "$border.subtle",
+                          "strokeWidth": 1,
+                          "justifyContent": "center",
+                          "alignItems": "center"
+                        },
+                        {
+                          "type": "text",
+                          "id": "XCjDW",
+                          "name": "Option",
+                          "fill": "$foreground.primary",
+                          "content": "Бесплатно",
+                          "fontFamily": "$font.body",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ei7ew",
+                      "name": "До 500 ₽",
+                      "gap": 9,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "krUbu",
+                          "name": "Checkbox",
+                          "width": 17,
+                          "height": 17,
+                          "fill": "$surface.primary",
+                          "cornerRadius": 4,
+                          "stroke": "$border.subtle",
+                          "strokeWidth": 1,
+                          "justifyContent": "center",
+                          "alignItems": "center"
+                        },
+                        {
+                          "type": "text",
+                          "id": "nI3LO",
+                          "name": "Option",
+                          "fill": "$foreground.primary",
+                          "content": "До 500 ₽",
+                          "fontFamily": "$font.body",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "a121x7",
+                      "name": "До 1 000 ₽",
+                      "gap": 9,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "nIpvV",
+                          "name": "Checkbox",
+                          "width": 17,
+                          "height": 17,
+                          "fill": "$surface.primary",
+                          "cornerRadius": 4,
+                          "stroke": "$border.subtle",
+                          "strokeWidth": 1,
+                          "justifyContent": "center",
+                          "alignItems": "center"
+                        },
+                        {
+                          "type": "text",
+                          "id": "o0kde",
+                          "name": "Option",
+                          "fill": "$foreground.primary",
+                          "content": "До 1 000 ₽",
+                          "fontFamily": "$font.body",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ejF31",
+              "name": "Results",
+              "width": "fill_container",
+              "height": "fill_container",
+              "layout": "vertical",
+              "gap": 26,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Lk39Y",
+                  "name": "Sort Row",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "oNinW",
+                      "name": "Results Label",
+                      "fill": "$foreground.primary",
+                      "content": "Ближайшие события",
+                      "fontFamily": "$font.heading",
+                      "fontSize": 26,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "VsIpK",
+                      "name": "Sort",
+                      "gap": 7,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "SmdQ0",
+                          "name": "Sort Label",
+                          "fill": "$foreground.secondary",
+                          "content": "По популярности",
+                          "fontFamily": "$font.body",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "icon",
+                          "id": "Pyjs0",
+                          "name": "Sort Icon",
+                          "width": 16,
+                          "height": 16,
+                          "icon": "chevron-down",
+                          "library": "lucide",
+                          "fill": "$foreground.secondary"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "lgenx",
+                  "name": "Catalog Grid",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "layout": "vertical",
+                  "gap": 28,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "tyIUX",
+                      "name": "Grid Row 1",
+                      "width": "fill_container",
+                      "gap": 18,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "I0X3lW",
+                          "name": "Catalog Event 1",
+                          "width": "fill_container",
+                          "height": 325,
+                          "layout": "vertical",
+                          "gap": 14,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "OO2so",
+                              "name": "Event Image",
+                              "metadata": {
+                                "type": "unsplash",
+                                "username": "neonwangphotography",
+                                "link": "https://unsplash.com/@neonwangphotography",
+                                "author": "Neon Wang"
+                              },
+                              "clip": true,
+                              "width": "fill_container",
+                              "height": 165,
+                              "fill": {
+                                "type": "image",
+                                "enabled": true,
+                                "url": "https://images.unsplash.com/photo-1785812945362-f616d7761e34?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk4MTQ5Mjd8&ixlib=rb-4.1.0&q=80&w=1080",
+                                "mode": "fill"
+                              },
+                              "cornerRadius": 4,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "nN7tx",
+                                  "layoutPosition": "absolute",
+                                  "x": 14,
+                                  "y": 14,
+                                  "name": "Category Badge",
+                                  "fill": "#F5F2E9EE",
+                                  "cornerRadius": 4,
+                                  "padding": [
+                                    7,
+                                    9
+                                  ],
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "t3X4m4",
+                                      "name": "Category",
+                                      "fill": "$foreground.primary",
+                                      "content": "ТЕАТР",
+                                      "fontFamily": "$font.data",
+                                      "fontSize": 10,
+                                      "fontWeight": "normal",
+                                      "letterSpacing": 0.8
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "jMny0",
+                              "name": "Card Meta",
+                              "width": "fill_container",
+                              "justifyContent": "space_between",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "f2PvZm",
+                                  "name": "Date",
+                                  "fill": "$accent.primary",
+                                  "content": "19 сентября · 19:00",
+                                  "fontFamily": "$font.data",
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "anbTe",
+                                  "name": "Price",
+                                  "fill": "$foreground.secondary",
+                                  "content": "от 700 ₽",
+                                  "fontFamily": "$font.data",
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "mA0I4",
+                              "name": "Event Title",
+                              "fill": "$foreground.primary",
+                              "content": "Горе от ума",
+                              "fontFamily": "$font.heading",
+                              "fontSize": 26,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "z0sfy",
+                              "name": "Place",
+                              "gap": 6,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "IZlRP",
+                                  "name": "Place Icon",
+                                  "width": 15,
+                                  "height": 15,
+                                  "icon": "map-pin",
+                                  "library": "lucide",
+                                  "fill": "$foreground.secondary"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "PEmoj",
+                                  "name": "Place Name",
+                                  "fill": "$foreground.secondary",
+                                  "content": "Театр-Театр",
+                                  "fontFamily": "$font.body",
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "q1ktIU",
+                          "name": "Catalog Event 2",
+                          "width": "fill_container",
+                          "height": 325,
+                          "layout": "vertical",
+                          "gap": 14,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "PNTJ1",
+                              "name": "Event Image",
+                              "metadata": {
+                                "type": "unsplash",
+                                "username": "asfotosde1enorme",
+                                "link": "https://unsplash.com/@asfotosde1enorme",
+                                "author": "Rui Alves"
+                              },
+                              "clip": true,
+                              "width": "fill_container",
+                              "height": 165,
+                              "fill": {
+                                "type": "image",
+                                "enabled": true,
+                                "url": "https://images.unsplash.com/photo-1658232630877-6a279285a107?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk4MTQ5Mjh8&ixlib=rb-4.1.0&q=80&w=1080",
+                                "mode": "fill"
+                              },
+                              "cornerRadius": 4,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "U793R",
+                                  "layoutPosition": "absolute",
+                                  "x": 14,
+                                  "y": 14,
+                                  "name": "Category Badge",
+                                  "fill": "#F5F2E9EE",
+                                  "cornerRadius": 4,
+                                  "padding": [
+                                    7,
+                                    9
+                                  ],
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "y8MXN",
+                                      "name": "Category",
+                                      "fill": "$foreground.primary",
+                                      "content": "ВЫСТАВКА",
+                                      "fontFamily": "$font.data",
+                                      "fontSize": 10,
+                                      "fontWeight": "normal",
+                                      "letterSpacing": 0.8
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "BxPAj",
+                              "name": "Card Meta",
+                              "width": "fill_container",
+                              "justifyContent": "space_between",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "NCpaI",
+                                  "name": "Date",
+                                  "fill": "$accent.primary",
+                                  "content": "до 30 ноября",
+                                  "fontFamily": "$font.data",
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "UCJFv",
+                                  "name": "Price",
+                                  "fill": "$foreground.secondary",
+                                  "content": "от 300 ₽",
+                                  "fontFamily": "$font.data",
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "ULHIT",
+                              "name": "Event Title",
+                              "fill": "$foreground.primary",
+                              "content": "Пермские боги",
+                              "fontFamily": "$font.heading",
+                              "fontSize": 26,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "MSHGK",
+                              "name": "Place",
+                              "gap": 6,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "X3GC5",
+                                  "name": "Place Icon",
+                                  "width": 15,
+                                  "height": 15,
+                                  "icon": "map-pin",
+                                  "library": "lucide",
+                                  "fill": "$foreground.secondary"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "rSxO5",
+                                  "name": "Place Name",
+                                  "fill": "$foreground.secondary",
+                                  "content": "Пермская галерея",
+                                  "fontFamily": "$font.body",
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "meK1G",
+                          "name": "Catalog Event 3",
+                          "width": "fill_container",
+                          "height": 325,
+                          "layout": "vertical",
+                          "gap": 14,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "t0af4L",
+                              "name": "Event Image",
+                              "metadata": {
+                                "type": "unsplash",
+                                "username": "shnautsher",
+                                "link": "https://unsplash.com/@shnautsher",
+                                "author": "Myznik Egor"
+                              },
+                              "clip": true,
+                              "width": "fill_container",
+                              "height": 165,
+                              "fill": {
+                                "type": "image",
+                                "enabled": true,
+                                "url": "https://images.unsplash.com/photo-1770101516572-d8d85d392d75?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk4MTQ5Mjl8&ixlib=rb-4.1.0&q=80&w=1080",
+                                "mode": "fill"
+                              },
+                              "cornerRadius": 4,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "P4MMU",
+                                  "layoutPosition": "absolute",
+                                  "x": 14,
+                                  "y": 14,
+                                  "name": "Category Badge",
+                                  "fill": "#F5F2E9EE",
+                                  "cornerRadius": 4,
+                                  "padding": [
+                                    7,
+                                    9
+                                  ],
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "NPZ7O",
+                                      "name": "Category",
+                                      "fill": "$foreground.primary",
+                                      "content": "КОНЦЕРТ",
+                                      "fontFamily": "$font.data",
+                                      "fontSize": 10,
+                                      "fontWeight": "normal",
+                                      "letterSpacing": 0.8
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "bGOer",
+                              "name": "Card Meta",
+                              "width": "fill_container",
+                              "justifyContent": "space_between",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "xcmxl",
+                                  "name": "Date",
+                                  "fill": "$accent.primary",
+                                  "content": "21 сентября · 18:00",
+                                  "fontFamily": "$font.data",
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "wCule",
+                                  "name": "Price",
+                                  "fill": "$success",
+                                  "content": "Бесплатно",
+                                  "fontFamily": "$font.data",
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "yA7X8",
+                              "name": "Event Title",
+                              "fill": "$foreground.primary",
+                              "content": "Симфония над Камой",
+                              "fontFamily": "$font.heading",
+                              "fontSize": 26,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "ISeI5",
+                              "name": "Place",
+                              "gap": 6,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "a44l6",
+                                  "name": "Place Icon",
+                                  "width": 15,
+                                  "height": 15,
+                                  "icon": "map-pin",
+                                  "library": "lucide",
+                                  "fill": "$foreground.secondary"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "jeDew",
+                                  "name": "Place Name",
+                                  "fill": "$foreground.secondary",
+                                  "content": "Набережная Камы",
+                                  "fontFamily": "$font.body",
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "OdG7K",
+                      "name": "Grid Row 2",
+                      "width": "fill_container",
+                      "gap": 18,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "gOkO1",
+                          "name": "Catalog Event 4",
+                          "width": "fill_container",
+                          "height": 325,
+                          "layout": "vertical",
+                          "gap": 14,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "B8AWA",
+                              "name": "Event Image",
+                              "metadata": {
+                                "type": "unsplash",
+                                "username": "neonwangphotography",
+                                "link": "https://unsplash.com/@neonwangphotography",
+                                "author": "Neon Wang"
+                              },
+                              "clip": true,
+                              "width": "fill_container",
+                              "height": 165,
+                              "fill": {
+                                "type": "image",
+                                "enabled": true,
+                                "url": "https://images.unsplash.com/photo-1785812945362-f616d7761e34?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk4MTQ5Mjd8&ixlib=rb-4.1.0&q=80&w=1080",
+                                "mode": "fill"
+                              },
+                              "cornerRadius": 4,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "yoktK",
+                                  "layoutPosition": "absolute",
+                                  "x": 14,
+                                  "y": 14,
+                                  "name": "Category Badge",
+                                  "fill": "#F5F2E9EE",
+                                  "cornerRadius": 4,
+                                  "padding": [
+                                    7,
+                                    9
+                                  ],
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "X18cvA",
+                                      "name": "Category",
+                                      "fill": "$foreground.primary",
+                                      "content": "ТЕАТР",
+                                      "fontFamily": "$font.data",
+                                      "fontSize": 10,
+                                      "fontWeight": "normal",
+                                      "letterSpacing": 0.8
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "a1dWO",
+                              "name": "Card Meta",
+                              "width": "fill_container",
+                              "justifyContent": "space_between",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "wqczi",
+                                  "name": "Date",
+                                  "fill": "$accent.primary",
+                                  "content": "19 сентября · 19:00",
+                                  "fontFamily": "$font.data",
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "VTlHS",
+                                  "name": "Price",
+                                  "fill": "$foreground.secondary",
+                                  "content": "от 700 ₽",
+                                  "fontFamily": "$font.data",
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "da8cs",
+                              "name": "Event Title",
+                              "fill": "$foreground.primary",
+                              "content": "Горе от ума",
+                              "fontFamily": "$font.heading",
+                              "fontSize": 26,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "NBtCd",
+                              "name": "Place",
+                              "gap": 6,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "d0FyKJ",
+                                  "name": "Place Icon",
+                                  "width": 15,
+                                  "height": 15,
+                                  "icon": "map-pin",
+                                  "library": "lucide",
+                                  "fill": "$foreground.secondary"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "JA37n",
+                                  "name": "Place Name",
+                                  "fill": "$foreground.secondary",
+                                  "content": "Театр-Театр",
+                                  "fontFamily": "$font.body",
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "iYXMF",
+                          "name": "Catalog Event 5",
+                          "width": "fill_container",
+                          "height": 325,
+                          "layout": "vertical",
+                          "gap": 14,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "iE8c7",
+                              "name": "Event Image",
+                              "metadata": {
+                                "type": "unsplash",
+                                "username": "asfotosde1enorme",
+                                "link": "https://unsplash.com/@asfotosde1enorme",
+                                "author": "Rui Alves"
+                              },
+                              "clip": true,
+                              "width": "fill_container",
+                              "height": 165,
+                              "fill": {
+                                "type": "image",
+                                "enabled": true,
+                                "url": "https://images.unsplash.com/photo-1658232630877-6a279285a107?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk4MTQ5Mjh8&ixlib=rb-4.1.0&q=80&w=1080",
+                                "mode": "fill"
+                              },
+                              "cornerRadius": 4,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "DvZGq",
+                                  "layoutPosition": "absolute",
+                                  "x": 14,
+                                  "y": 14,
+                                  "name": "Category Badge",
+                                  "fill": "#F5F2E9EE",
+                                  "cornerRadius": 4,
+                                  "padding": [
+                                    7,
+                                    9
+                                  ],
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "Kqmsf",
+                                      "name": "Category",
+                                      "fill": "$foreground.primary",
+                                      "content": "ВЫСТАВКА",
+                                      "fontFamily": "$font.data",
+                                      "fontSize": 10,
+                                      "fontWeight": "normal",
+                                      "letterSpacing": 0.8
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "RWUN2",
+                              "name": "Card Meta",
+                              "width": "fill_container",
+                              "justifyContent": "space_between",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "b2cjV",
+                                  "name": "Date",
+                                  "fill": "$accent.primary",
+                                  "content": "до 30 ноября",
+                                  "fontFamily": "$font.data",
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "P8tEQ",
+                                  "name": "Price",
+                                  "fill": "$foreground.secondary",
+                                  "content": "от 300 ₽",
+                                  "fontFamily": "$font.data",
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "DUZPP",
+                              "name": "Event Title",
+                              "fill": "$foreground.primary",
+                              "content": "Пермские боги",
+                              "fontFamily": "$font.heading",
+                              "fontSize": 26,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "X1Obq",
+                              "name": "Place",
+                              "gap": 6,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "uZ4a1",
+                                  "name": "Place Icon",
+                                  "width": 15,
+                                  "height": 15,
+                                  "icon": "map-pin",
+                                  "library": "lucide",
+                                  "fill": "$foreground.secondary"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "usIG9",
+                                  "name": "Place Name",
+                                  "fill": "$foreground.secondary",
+                                  "content": "Пермская галерея",
+                                  "fontFamily": "$font.body",
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "iK5lk",
+                          "name": "Catalog Event 6",
+                          "width": "fill_container",
+                          "height": 325,
+                          "layout": "vertical",
+                          "gap": 14,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "V5UNG9",
+                              "name": "Event Image",
+                              "metadata": {
+                                "type": "unsplash",
+                                "username": "shnautsher",
+                                "link": "https://unsplash.com/@shnautsher",
+                                "author": "Myznik Egor"
+                              },
+                              "clip": true,
+                              "width": "fill_container",
+                              "height": 165,
+                              "fill": {
+                                "type": "image",
+                                "enabled": true,
+                                "url": "https://images.unsplash.com/photo-1770101516572-d8d85d392d75?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk4MTQ5Mjl8&ixlib=rb-4.1.0&q=80&w=1080",
+                                "mode": "fill"
+                              },
+                              "cornerRadius": 4,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "s9FMv",
+                                  "layoutPosition": "absolute",
+                                  "x": 14,
+                                  "y": 14,
+                                  "name": "Category Badge",
+                                  "fill": "#F5F2E9EE",
+                                  "cornerRadius": 4,
+                                  "padding": [
+                                    7,
+                                    9
+                                  ],
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "VTGfs",
+                                      "name": "Category",
+                                      "fill": "$foreground.primary",
+                                      "content": "КОНЦЕРТ",
+                                      "fontFamily": "$font.data",
+                                      "fontSize": 10,
+                                      "fontWeight": "normal",
+                                      "letterSpacing": 0.8
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "Q89GJ",
+                              "name": "Card Meta",
+                              "width": "fill_container",
+                              "justifyContent": "space_between",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "h8zwXm",
+                                  "name": "Date",
+                                  "fill": "$accent.primary",
+                                  "content": "21 сентября · 18:00",
+                                  "fontFamily": "$font.data",
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "YnO1m",
+                                  "name": "Price",
+                                  "fill": "$success",
+                                  "content": "Бесплатно",
+                                  "fontFamily": "$font.data",
+                                  "fontSize": 11,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "MpJjA",
+                              "name": "Event Title",
+                              "fill": "$foreground.primary",
+                              "content": "Симфония над Камой",
+                              "fontFamily": "$font.heading",
+                              "fontSize": 26,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "Z3Zsii",
+                              "name": "Place",
+                              "gap": 6,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "ivKF6",
+                                  "name": "Place Icon",
+                                  "width": 15,
+                                  "height": 15,
+                                  "icon": "map-pin",
+                                  "library": "lucide",
+                                  "fill": "$foreground.secondary"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "peMW0",
+                                  "name": "Place Name",
+                                  "fill": "$foreground.secondary",
+                                  "content": "Набережная Камы",
+                                  "fontFamily": "$font.body",
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "oQ9wc",
+      "x": 3040,
+      "y": 180,
+      "name": "Public / Event Detail",
+      "clip": true,
+      "width": 1440,
+      "height": 1240,
+      "fill": "$surface.primary",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "Eri1x",
+          "type": "ref",
+          "ref": "BG7Wg",
+          "name": "Header",
+          "width": "fill_container"
+        },
+        {
+          "type": "frame",
+          "id": "oKibn",
+          "name": "Breadcrumb",
+          "width": "fill_container",
+          "height": 54,
+          "stroke": "$border.subtle",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "gap": 8,
+          "padding": [
+            0,
+            96
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "rdgug",
+              "name": "Афиша",
+              "fill": "$foreground.secondary",
+              "content": "Афиша",
+              "fontFamily": "$font.caption",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "icon",
+              "id": "ZLn29",
+              "name": "Chevron",
+              "width": 13,
+              "height": 13,
+              "icon": "chevron-right",
+              "library": "lucide",
+              "fill": "$foreground.secondary"
+            },
+            {
+              "type": "text",
+              "id": "BaUGB",
+              "name": "Театр",
+              "fill": "$foreground.secondary",
+              "content": "Театр",
+              "fontFamily": "$font.caption",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "icon",
+              "id": "FblCA",
+              "name": "Chevron",
+              "width": 13,
+              "height": 13,
+              "icon": "chevron-right",
+              "library": "lucide",
+              "fill": "$foreground.secondary"
+            },
+            {
+              "type": "text",
+              "id": "MxZ7T",
+              "name": "Горе от ума",
+              "fill": "$foreground.primary",
+              "content": "Горе от ума",
+              "fontFamily": "$font.caption",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "WQYaW",
+          "name": "Event Hero",
+          "width": "fill_container",
+          "height": 500,
+          "gap": 48,
+          "padding": [
+            46,
+            96
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "Nfmem",
+              "name": "Event Intro",
+              "width": 500,
+              "layout": "vertical",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "bVrt9",
+                  "name": "Category",
+                  "fill": "$accent.primary",
+                  "content": "ТЕАТР · 16+",
+                  "fontFamily": "$font.data",
+                  "fontSize": 11,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "r52MW",
+                  "name": "Event Title",
+                  "fill": "$foreground.primary",
+                  "content": "Горе от ума",
+                  "fontFamily": "$font.heading",
+                  "fontSize": 64,
+                  "fontWeight": "500",
+                  "letterSpacing": -1
+                },
+                {
+                  "type": "text",
+                  "id": "LTyDt",
+                  "name": "Event Lead",
+                  "fill": "$foreground.secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 460,
+                  "content": "Комедия Александра Грибоедова в постановке Театра-Театра — о свободе, любви и обществе, которое не готово меняться.",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font.body",
+                  "fontSize": 18,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "xeQ1D",
+                  "name": "Facts",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "yRxdv",
+                      "name": "19 сентября, 19:00",
+                      "gap": 10,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "nzQXc",
+                          "name": "Fact Icon",
+                          "width": 18,
+                          "height": 18,
+                          "icon": "calendar-days",
+                          "library": "lucide",
+                          "fill": "$accent.primary"
+                        },
+                        {
+                          "type": "text",
+                          "id": "EHKne",
+                          "name": "Fact Text",
+                          "fill": "$foreground.primary",
+                          "content": "19 сентября, 19:00",
+                          "fontFamily": "$font.body",
+                          "fontSize": 15,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "GdHNW",
+                      "name": "Театр-Театр · ул. Ленина, 53",
+                      "gap": 10,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "GAaEY",
+                          "name": "Fact Icon",
+                          "width": 18,
+                          "height": 18,
+                          "icon": "map-pin",
+                          "library": "lucide",
+                          "fill": "$accent.primary"
+                        },
+                        {
+                          "type": "text",
+                          "id": "CdMtG",
+                          "name": "Fact Text",
+                          "fill": "$foreground.primary",
+                          "content": "Театр-Театр · ул. Ленина, 53",
+                          "fontFamily": "$font.body",
+                          "fontSize": 15,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "kSoM0",
+                      "name": "2 часа 30 минут с антрактом",
+                      "gap": 10,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "snr5T",
+                          "name": "Fact Icon",
+                          "width": 18,
+                          "height": 18,
+                          "icon": "clock-3",
+                          "library": "lucide",
+                          "fill": "$accent.primary"
+                        },
+                        {
+                          "type": "text",
+                          "id": "X2Aa8N",
+                          "name": "Fact Text",
+                          "fill": "$foreground.primary",
+                          "content": "2 часа 30 минут с антрактом",
+                          "fontFamily": "$font.body",
+                          "fontSize": 15,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "NMdwC",
+                  "name": "Buy Ticket",
+                  "height": 50,
+                  "fill": "$accent.primary",
+                  "cornerRadius": 4,
+                  "gap": 10,
+                  "padding": [
+                    0,
+                    22
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Nz0Fv",
+                      "name": "Buy Label",
+                      "fill": "#FFFFFF",
+                      "content": "Купить билет · от 700 ₽",
+                      "fontFamily": "$font.body",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "icon",
+                      "id": "m4xfT",
+                      "name": "Buy Arrow",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "arrow-up-right",
+                      "library": "lucide",
+                      "fill": "#FFFFFF"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "VQDNV",
+              "name": "Event Visual",
+              "clip": true,
+              "width": "fill_container",
+              "height": 408,
+              "cornerRadius": 4,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "JYTZm",
+                  "name": "Theater Image",
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "neonwangphotography",
+                    "link": "https://unsplash.com/@neonwangphotography",
+                    "author": "Neon Wang"
+                  },
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "https://images.unsplash.com/photo-1785812945362-f616d7761e34?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk4MTQ5Mjd8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": 4,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "H4FMj",
+                      "layoutPosition": "absolute",
+                      "x": 14,
+                      "y": 14,
+                      "name": "Category Badge",
+                      "fill": "#F5F2E9EE",
+                      "cornerRadius": 4,
+                      "padding": [
+                        7,
+                        9
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "h4cved",
+                          "name": "Category",
+                          "fill": "$foreground.primary",
+                          "content": "ТЕАТР",
+                          "fontFamily": "$font.data",
+                          "fontSize": 10,
+                          "fontWeight": "normal",
+                          "letterSpacing": 0.8
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "oBhPD",
+          "name": "Event Content",
+          "width": "fill_container",
+          "height": "fill_container",
+          "stroke": "$border.subtle",
+          "strokeWidth": {
+            "top": 1
+          },
+          "gap": 56,
+          "padding": [
+            44,
+            96,
+            56,
+            96
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "UXYNV",
+              "name": "Article",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 32,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "h3gJ1",
+                  "name": "About Title",
+                  "fill": "$foreground.primary",
+                  "content": "О спектакле",
+                  "fontFamily": "$font.heading",
+                  "fontSize": 34,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "DBqAd",
+                  "name": "About Text",
+                  "fill": "$foreground.secondary",
+                  "textGrowth": "fixed-width",
+                  "width": 670,
+                  "content": "Знакомая со школы пьеса становится разговором о сегодняшнем дне. Чацкий возвращается в Москву и обнаруживает мир, где искренность неудобна, а перемены пугают. Спектакль соединяет классический текст, современную сценографию и живую музыку.\n\nПостановка сохраняет авторскую иронию, но делает героев ближе — их выборы узнаваемы, а конфликт между личной свободой и общественным ожиданием звучит особенно остро.",
+                  "lineHeight": 1.58,
+                  "fontFamily": "$font.body",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "s5PKF",
+                  "name": "Tags",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "gLahY",
+                      "name": "Классика",
+                      "fill": "$surface.secondary",
+                      "cornerRadius": 4,
+                      "padding": [
+                        8,
+                        11
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "yz9rG",
+                          "name": "Классика Text",
+                          "fill": "$foreground.primary",
+                          "content": "Классика",
+                          "fontFamily": "$font.caption",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "z42QT",
+                      "name": "Драма",
+                      "fill": "$surface.secondary",
+                      "cornerRadius": 4,
+                      "padding": [
+                        8,
+                        11
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "GaPIT",
+                          "name": "Драма Text",
+                          "fill": "$foreground.primary",
+                          "content": "Драма",
+                          "fontFamily": "$font.caption",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "CrGOe",
+                      "name": "Премьера сезона",
+                      "fill": "$surface.secondary",
+                      "cornerRadius": 4,
+                      "padding": [
+                        8,
+                        11
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "jFT74",
+                          "name": "Премьера сезона Text",
+                          "fill": "$foreground.primary",
+                          "content": "Премьера сезона",
+                          "fontFamily": "$font.caption",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "vhCLA",
+              "name": "Schedule Panel",
+              "width": 390,
+              "stroke": "$border.subtle",
+              "strokeWidth": {
+                "left": 1
+              },
+              "layout": "vertical",
+              "gap": 18,
+              "padding": [
+                0,
+                0,
+                0,
+                32
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Rp6tu",
+                  "name": "Schedule Title",
+                  "fill": "$foreground.primary",
+                  "content": "Ближайшие сеансы",
+                  "fontFamily": "$font.heading",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "frame",
+                  "id": "N2TguV",
+                  "name": "19 сен",
+                  "width": "fill_container",
+                  "height": 68,
+                  "fill": "#FFFFFF55",
+                  "cornerRadius": 4,
+                  "stroke": "$border.subtle",
+                  "strokeWidth": 1,
+                  "padding": [
+                    0,
+                    14
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Bs5nZ",
+                      "name": "Session Date",
+                      "gap": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "fJnGN",
+                          "name": "Day",
+                          "fill": "$accent.primary",
+                          "content": "СБ",
+                          "fontFamily": "$font.data",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "U9t61c",
+                          "name": "Date",
+                          "fill": "$foreground.primary",
+                          "content": "19 сен",
+                          "fontFamily": "$font.body",
+                          "fontSize": 15,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "l3aup0",
+                      "name": "Time",
+                      "fill": "$foreground.primary",
+                      "content": "19:00",
+                      "fontFamily": "$font.data",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "WE3zy",
+                  "name": "20 сен",
+                  "width": "fill_container",
+                  "height": 68,
+                  "fill": "#FFFFFF55",
+                  "cornerRadius": 4,
+                  "stroke": "$border.subtle",
+                  "strokeWidth": 1,
+                  "padding": [
+                    0,
+                    14
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "E6lp2G",
+                      "name": "Session Date",
+                      "gap": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "vCo7I",
+                          "name": "Day",
+                          "fill": "$accent.primary",
+                          "content": "ВС",
+                          "fontFamily": "$font.data",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "z2rojP",
+                          "name": "Date",
+                          "fill": "$foreground.primary",
+                          "content": "20 сен",
+                          "fontFamily": "$font.body",
+                          "fontSize": 15,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "R4zyv",
+                      "name": "Time",
+                      "fill": "$foreground.primary",
+                      "content": "18:00",
+                      "fontFamily": "$font.data",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "MtILk",
+                  "name": "24 сен",
+                  "width": "fill_container",
+                  "height": 68,
+                  "fill": "#FFFFFF55",
+                  "cornerRadius": 4,
+                  "stroke": "$border.subtle",
+                  "strokeWidth": 1,
+                  "padding": [
+                    0,
+                    14
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Q1f17J",
+                      "name": "Session Date",
+                      "gap": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "necNY",
+                          "name": "Day",
+                          "fill": "$accent.primary",
+                          "content": "ЧТ",
+                          "fontFamily": "$font.data",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "mN1Cu",
+                          "name": "Date",
+                          "fill": "$foreground.primary",
+                          "content": "24 сен",
+                          "fontFamily": "$font.body",
+                          "fontSize": 15,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "aNL8P",
+                      "name": "Time",
+                      "fill": "$foreground.primary",
+                      "content": "19:00",
+                      "fontFamily": "$font.data",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "PzHjn",
+                  "name": "Venue",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": [
+                    18,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "mH7wK",
+                      "name": "Venue Label",
+                      "fill": "$accent.primary",
+                      "content": "ПЛОЩАДКА",
+                      "fontFamily": "$font.data",
+                      "fontSize": 10,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "text",
+                      "id": "KiQUk",
+                      "name": "Venue Name",
+                      "fill": "$foreground.primary",
+                      "content": "Театр-Театр",
+                      "fontFamily": "$font.heading",
+                      "fontSize": 22,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "pSs4I",
+                      "name": "Venue Address",
+                      "fill": "$foreground.secondary",
+                      "content": "ул. Ленина, 53 · 12 минут от центра",
+                      "fontFamily": "$font.body",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "fcvTw",
+      "x": 4560,
+      "y": 180,
+      "name": "Mobile / Home",
+      "clip": true,
+      "width": 390,
+      "height": 844,
+      "fill": "$surface.primary",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "M6eKNG",
+          "name": "Mobile Header",
+          "width": "fill_container",
+          "height": 64,
+          "stroke": "$border.subtle",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "padding": [
+            0,
+            18
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "tebJ3",
+              "name": "Mobile Brand",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "TTtQZ",
+                  "name": "Mobile Mark",
+                  "width": 30,
+                  "height": 30,
+                  "fill": "$accent.primary",
+                  "cornerRadius": 15,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "sm2CC",
+                      "name": "Letter",
+                      "fill": "#FFFFFF",
+                      "content": "П",
+                      "fontFamily": "$font.heading",
+                      "fontSize": 18,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "XW77l",
+                  "name": "Mobile Brand Name",
+                  "fill": "$foreground.primary",
+                  "content": "Пермь.События",
+                  "fontFamily": "$font.heading",
+                  "fontSize": 18,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "v7BxB0",
+              "name": "Mobile Tools",
+              "gap": 14,
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "zIR8t",
+                  "name": "Mobile Search",
+                  "width": 20,
+                  "height": 20,
+                  "icon": "search",
+                  "library": "lucide",
+                  "fill": "$foreground.primary"
+                },
+                {
+                  "type": "icon",
+                  "id": "mZQXN",
+                  "name": "Menu",
+                  "width": 20,
+                  "height": 20,
+                  "icon": "menu",
+                  "library": "lucide",
+                  "fill": "$foreground.primary"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Wtrgf",
+          "name": "Mobile Hero",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            26,
+            18,
+            16,
+            18
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "bIBmw",
+              "name": "Mobile Kicker",
+              "fill": "$accent.primary",
+              "content": "АФИША ПЕРМИ · СЕГОДНЯ",
+              "fontFamily": "$font.data",
+              "fontSize": 10,
+              "fontWeight": "normal",
+              "letterSpacing": 0.9
+            },
+            {
+              "type": "text",
+              "id": "mTw68",
+              "name": "Mobile Title",
+              "fill": "$foreground.primary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Город, в котором всегда что-то происходит",
+              "lineHeight": 1.02,
+              "fontFamily": "$font.heading",
+              "fontSize": 42,
+              "fontWeight": "500",
+              "letterSpacing": -0.7
+            },
+            {
+              "type": "text",
+              "id": "xmtDO",
+              "name": "Mobile Description",
+              "fill": "$foreground.secondary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Концерты, спектакли, выставки и городские события — в одной афише.",
+              "lineHeight": 1.5,
+              "fontFamily": "$font.body",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "QjgKj",
+              "name": "Mobile Action",
+              "height": 46,
+              "fill": "$accent.primary",
+              "cornerRadius": 4,
+              "padding": [
+                0,
+                18
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "L4NeNz",
+                  "name": "Mobile Action Label",
+                  "fill": "#FFFFFF",
+                  "content": "Смотреть афишу",
+                  "fontFamily": "$font.body",
+                  "fontSize": 15,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "M4FkM",
+              "name": "Mobile Hero Image",
+              "clip": true,
+              "width": "fill_container",
+              "height": 188,
+              "cornerRadius": 4,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "HHNPj",
+                  "name": "Perm Mobile Image",
+                  "metadata": {
+                    "type": "unsplash",
+                    "username": "cj580",
+                    "link": "https://unsplash.com/@cj580",
+                    "author": "Chris Johnson"
+                  },
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "https://images.unsplash.com/photo-1660492038731-f6f32fd8b399?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk4MTQ4OTl8&ixlib=rb-4.1.0&q=80&w=1080",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": 4
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ububW",
+          "name": "Mobile Featured",
+          "width": "fill_container",
+          "stroke": "$border.subtle",
+          "strokeWidth": {
+            "top": 1
+          },
+          "layout": "vertical",
+          "gap": 10,
+          "padding": [
+            16,
+            18
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "t6XbFB",
+              "name": "Mobile Section Header",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "e89yh",
+                  "name": "Mobile Section Title",
+                  "fill": "$foreground.primary",
+                  "content": "Главное сегодня",
+                  "fontFamily": "$font.heading",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "icon",
+                  "id": "x002sG",
+                  "name": "Mobile Arrow",
+                  "width": 18,
+                  "height": 18,
+                  "icon": "arrow-right",
+                  "library": "lucide",
+                  "fill": "$foreground.primary"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "H7Sit",
+              "name": "Mobile Event Card",
+              "width": "fill_container",
+              "height": 150,
+              "gap": 14,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "UCw7b",
+                  "name": "Mobile Card Image",
+                  "clip": true,
+                  "width": 142,
+                  "height": "fill_container",
+                  "cornerRadius": 4,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "iFRvC",
+                      "name": "Theater Thumbnail",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "neonwangphotography",
+                        "link": "https://unsplash.com/@neonwangphotography",
+                        "author": "Neon Wang"
+                      },
+                      "clip": true,
+                      "width": "fill_container",
+                      "height": "fill_container",
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1785812945362-f616d7761e34?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODk4MTQ5Mjd8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 4,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "JDgQj",
+                          "layoutPosition": "absolute",
+                          "x": 14,
+                          "y": 14,
+                          "name": "Category Badge",
+                          "fill": "#F5F2E9EE",
+                          "cornerRadius": 4,
+                          "padding": [
+                            7,
+                            9
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "KQ3fl",
+                              "name": "Category",
+                              "fill": "$foreground.primary",
+                              "content": "ТЕАТР",
+                              "fontFamily": "$font.data",
+                              "fontSize": 10,
+                              "fontWeight": "normal",
+                              "letterSpacing": 0.8
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "nU7MF",
+                  "name": "Mobile Card Text",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 9,
+                  "padding": [
+                    4,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "VekAu",
+                      "name": "Mobile Card Date",
+                      "fill": "$accent.primary",
+                      "content": "19 СЕН · 19:00",
+                      "fontFamily": "$font.data",
+                      "fontSize": 10,
+                      "fontWeight": "normal",
+                      "letterSpacing": 0.6
+                    },
+                    {
+                      "type": "text",
+                      "id": "t4Z9Y",
+                      "name": "Mobile Card Title",
+                      "fill": "$foreground.primary",
+                      "content": "Горе от ума",
+                      "fontFamily": "$font.heading",
+                      "fontSize": 25,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "BnODz",
+                      "name": "Mobile Card Place",
+                      "fill": "$foreground.secondary",
+                      "content": "Театр-Театр",
+                      "fontFamily": "$font.body",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "VEI3Y",
+                      "name": "Mobile Card Price",
+                      "fill": "$foreground.primary",
+                      "content": "от 700 ₽",
+                      "fontFamily": "$font.data",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "surface.primary": {
+      "type": "color",
+      "value": "#F5F2E9"
+    },
+    "surface.secondary": {
+      "type": "color",
+      "value": "#E8E4D8"
+    },
+    "foreground.primary": {
+      "type": "color",
+      "value": "#2D2926"
+    },
+    "foreground.secondary": {
+      "type": "color",
+      "value": "#5E5954"
+    },
+    "border.subtle": {
+      "type": "color",
+      "value": "#DCD8CB"
+    },
+    "accent.primary": {
+      "type": "color",
+      "value": "#B94329"
+    },
+    "accent.deep": {
+      "type": "color",
+      "value": "#7C2D1D"
+    },
+    "accent.soft": {
+      "type": "color",
+      "value": "#F0D8CB"
+    },
+    "success": {
+      "type": "color",
+      "value": "#2F6B4F"
+    },
+    "font.heading": {
+      "type": "string",
+      "value": "Newsreader"
+    },
+    "font.body": {
+      "type": "string",
+      "value": "Funnel Sans"
+    },
+    "font.caption": {
+      "type": "string",
+      "value": "Geist"
+    },
+    "font.data": {
+      "type": "string",
+      "value": "Geist Mono"
+    },
+    "space.s": {
+      "type": "number",
+      "value": 8
+    },
+    "space.m": {
+      "type": "number",
+      "value": 16
+    },
+    "space.l": {
+      "type": "number",
+      "value": 24
+    },
+    "space.xl": {
+      "type": "number",
+      "value": 40
+    },
+    "radius.sm": {
+      "type": "number",
+      "value": 4
+    }
+  },
+  "fileToken": "812cd736-b422-4635-932e-8ce053f0be54"
+}
