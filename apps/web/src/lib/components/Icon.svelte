@@ -9,7 +9,9 @@
     | "calendar"
     | "clock"
     | "plus"
-    | "minus";
+    | "minus"
+    | "list"
+    | "map";
 
   const PATHS: Record<IconName, string> = {
     pin: "M12 21s-7-5.1-7-11a7 7 0 1 1 14 0c0 5.9-7 11-7 11Zm0-8.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z",
@@ -22,7 +24,9 @@
       "M8 2v4m8-4v4M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm-2 5h18",
     clock: "M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Zm0-14v6l4 2",
     plus: "M12 5v14M5 12h14",
-    minus: "M5 12h14"
+    minus: "M5 12h14",
+    list: "M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01",
+    map: "M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2Zm0 0v14m6-12v14"
   };
 </script>
 

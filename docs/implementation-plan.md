@@ -200,8 +200,11 @@
 и работают на типизированных моках (`apps/web/src/lib/data/`), чьи DTO повторяют контракты
 будущего публичного API. Реализованы фильтры по дате/категории/цене, поиск, пагинация,
 empty/error-состояния, статусы сеансов cancelled/postponed и responsive-вёрстка.
-Критерий «данные из PostgreSQL, а не mock» остаётся открытым до вертикального среза
-`packages/db` → `apps/api` → `apps/web` (дизайн-спека: `docs/superpowers/specs/2026-09-19-demo-catalog-design.md`).
+Добавлены карты на MapLibre GL (`svelte-maplibre-gl`): карта площадки в карточке события
+и режим «Карта» в каталоге (`/events?view=map`) — все события, проходящие фильтры,
+сгруппированы по площадкам с попапами-ссылками. Критерий «данные из PostgreSQL, а не mock»
+остаётся открытым до вертикального среза `packages/db` → `apps/api` → `apps/web`
+(дизайн-спека: `docs/superpowers/specs/2026-09-19-demo-catalog-design.md`).
 
 ### Приложения и пакеты
 

@@ -1,4 +1,4 @@
-import { listCategories, listEvents, type PriceFilter } from "$lib/data";
+import { listCategories, listEvents, listMapEvents, type PriceFilter } from "$lib/data";
 import type { DatePreset } from "$lib/types";
 
 import type { PageServerLoad } from "./$types";
@@ -10,6 +10,7 @@ export const load: PageServerLoad = ({ url }) => {
   const dateParam = url.searchParams.get("date") ?? "";
   const priceParam = url.searchParams.get("price") ?? "";
   const pageParam = Number(url.searchParams.get("page") ?? "1");
+  const view = url.searchParams.get("view") === "map" ? "map" : "list";
 
   const filter = {
     category: url.searchParams.get("category") ?? "",
@@ -18,17 +19,23 @@ export const load: PageServerLoad = ({ url }) => {
     q: url.searchParams.get("q")?.trim() ?? ""
   };
 
-  const result = listEvents({
+  const query = {
     category: filter.category || undefined,
     date: (filter.date || undefined) as DatePreset | undefined,
     price: (filter.price || undefined) as PriceFilter | undefined,
-    q: filter.q || undefined,
+    q: filter.q || undefined
+  };
+
+  const result = listEvents({
+    ...query,
     page: Number.isFinite(pageParam) && pageParam > 0 ? Math.trunc(pageParam) : 1
   });
 
   return {
     categories: listCategories(),
     result,
-    filter
+    filter,
+    view,
+    mapGroups: view === "map" ? listMapEvents(query) : []
   };
 };

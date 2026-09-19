@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { resolve } from "$app/paths";
+
   import EmptyState from "$lib/components/EmptyState.svelte";
   import EventCard from "$lib/components/EventCard.svelte";
   import FilterPanel from "$lib/components/FilterPanel.svelte";
@@ -22,6 +24,16 @@
       }).filter(([, value]) => value !== "")
     )
   );
+
+  /** Query-строка с активными фильтрами и выбранным представлением. */
+  function viewQuery(view: "list" | "map"): string {
+    const params = new URLSearchParams(activeQuery);
+    if (view === "map") {
+      params.set("view", "map");
+    }
+    const value = params.toString();
+    return value === "" ? "" : `?${value}`;
+  }
 </script>
 
 <svelte:head>
@@ -67,11 +79,39 @@
 
     <section class="results" aria-labelledby="results-title">
       <div class="sort-row">
-        <h2 id="results-title">Ближайшие события</h2>
+        <h2 id="results-title">
+          {data.view === "map" ? "События на карте" : "Ближайшие события"}
+        </h2>
+        <div class="view-tabs" role="group" aria-label="Представление результатов">
+          <a
+            class="view-tab"
+            class:active={data.view === "list"}
+            href="{resolve("/events")}{viewQuery("list")}"
+            aria-current={data.view === "list" ? "true" : undefined}
+          >
+            <Icon name="list" size={15} />
+            Список
+          </a>
+          <a
+            class="view-tab"
+            class:active={data.view === "map"}
+            href="{resolve("/events")}{viewQuery("map")}"
+            aria-current={data.view === "map" ? "true" : undefined}
+          >
+            <Icon name="map" size={15} />
+            Карта
+          </a>
+        </div>
       </div>
 
       {#if data.result.items.length === 0}
         <EmptyState />
+      {:else if data.view === "map"}
+        {#await import("$lib/components/EventsMap.svelte")}
+          <div class="map-placeholder" aria-hidden="true"></div>
+        {:then { default: EventsMap }}
+          <EventsMap groups={data.mapGroups} />
+        {/await}
       {:else}
         <div class="grid">
           {#each data.result.items as event (event.slug)}
@@ -174,6 +214,46 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: var(--space-m);
+  }
+
+  .view-tabs {
+    display: inline-flex;
+    gap: 0;
+  }
+
+  .view-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    height: 38px;
+    padding: 0 14px;
+    border: 1px solid var(--border-subtle);
+    background: var(--surface-primary);
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .view-tab:first-child {
+    border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+  }
+
+  .view-tab:last-child {
+    border-left: 0;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  }
+
+  .view-tab.active {
+    border-color: var(--foreground-primary);
+    background: var(--foreground-primary);
+    color: #ffffff;
+  }
+
+  .map-placeholder {
+    height: min(62vh, 620px);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    background: var(--surface-secondary);
   }
 
   h2 {

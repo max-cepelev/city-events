@@ -10,12 +10,13 @@ import type {
   EventDetails,
   EventListItem,
   Occurrence,
-  Paginated
+  Paginated,
+  VenueSummary
 } from "$lib/types";
 
 import { CATEGORIES, categoryBySlug } from "./categories";
 import { EVENTS, type MockEventTemplate } from "./events";
-import { VENUES } from "./venues";
+import { venueBySlug } from "./venues";
 
 export const DEFAULT_PAGE_SIZE = 9;
 
@@ -28,6 +29,11 @@ export interface ListEventsFilter {
   readonly q?: string;
   readonly page?: number;
   readonly pageSize?: number;
+}
+
+export interface MapVenueGroup {
+  readonly venue: VenueSummary;
+  readonly events: readonly EventListItem[];
 }
 
 interface MaterializedEvent {
@@ -95,7 +101,7 @@ function toListItem(
     nextOccurrence,
     finalOccurrenceDate: scheduled.at(-1)?.startsAt ?? null,
     occurrencesCount: scheduled.length,
-    venue: template.venueSlug === null ? null : (VENUES[template.venueSlug] ?? null)
+    venue: template.venueSlug === null ? null : venueBySlug(template.venueSlug)
   };
 }
 
@@ -114,7 +120,7 @@ function matchesSearch(template: MockEventTemplate, query: string): boolean {
   const haystack = [
     template.title,
     template.shortDescription,
-    template.venueSlug === null ? "" : (VENUES[template.venueSlug]?.name ?? ""),
+    template.venueSlug === null ? "" : (venueBySlug(template.venueSlug)?.name ?? ""),
     categoryBySlug(template.categorySlug)?.name ?? ""
   ]
     .join(" ")
@@ -130,13 +136,16 @@ export function listCategories() {
   return CATEGORIES;
 }
 
-export function listEvents(filter: ListEventsFilter = {}): Paginated<EventListItem> {
-  const now = new Date();
+/** События, проходящие фильтры, отсортированные по ближайшему сеансу. */
+function selectMatching(
+  filter: Omit<ListEventsFilter, "page" | "pageSize">,
+  now: Date
+): EventListItem[] {
   const range = filter.date === undefined ? null : resolveDatePreset(filter.date, now);
   const from = range?.from ?? now;
   const to = range?.to ?? null;
 
-  const matched = EVENTS.map((template) => materialize(template, now))
+  return EVENTS.map((template) => materialize(template, now))
     .filter((event) => {
       if (filter.category !== undefined && event.template.categorySlug !== filter.category) {
         return false;
@@ -144,7 +153,11 @@ export function listEvents(filter: ListEventsFilter = {}): Paginated<EventListIt
       if (filter.price !== undefined && !matchesPrice(event.template, filter.price)) {
         return false;
       }
-      if (filter.q !== undefined && filter.q.trim() !== "" && !matchesSearch(event.template, filter.q)) {
+      if (
+        filter.q !== undefined &&
+        filter.q.trim() !== "" &&
+        !matchesSearch(event.template, filter.q)
+      ) {
         return false;
       }
       return nextOccurrenceIn(event.occurrences, from, to) !== null;
@@ -155,6 +168,10 @@ export function listEvents(filter: ListEventsFilter = {}): Paginated<EventListIt
       const bStarts = b.nextOccurrence?.startsAt ?? "";
       return aStarts.localeCompare(bStarts);
     });
+}
+
+export function listEvents(filter: ListEventsFilter = {}): Paginated<EventListItem> {
+  const matched = selectMatching(filter, new Date());
 
   const page = Math.max(1, Math.trunc(filter.page ?? 1));
   const pageSize = Math.min(50, Math.max(1, Math.trunc(filter.pageSize ?? DEFAULT_PAGE_SIZE)));
@@ -169,6 +186,31 @@ export function listEvents(filter: ListEventsFilter = {}): Paginated<EventListIt
     totalItems,
     totalPages
   };
+}
+
+/**
+ * Все события, проходящие фильтры, сгруппированные по площадкам —
+ * для картографического представления каталога (без пагинации).
+ */
+export function listMapEvents(
+  filter: Omit<ListEventsFilter, "page" | "pageSize"> = {}
+): readonly MapVenueGroup[] {
+  const matched = selectMatching(filter, new Date());
+  const groups = new Map<string, { venue: VenueSummary; events: EventListItem[] }>();
+
+  for (const item of matched) {
+    if (item.venue === null) {
+      continue;
+    }
+    const group = groups.get(item.venue.slug);
+    if (group === undefined) {
+      groups.set(item.venue.slug, { venue: item.venue, events: [item] });
+    } else {
+      group.events.push(item);
+    }
+  }
+
+  return [...groups.values()];
 }
 
 export function listFeatured(limit = 3): readonly EventListItem[] {
@@ -198,7 +240,7 @@ export function getEvent(slug: string): EventDetails | null {
     occurrences: occurrences.filter(
       (occurrence) => new Date(occurrence.endsAt ?? occurrence.startsAt).getTime() >= now.getTime()
     ),
-    venue: template.venueSlug === null ? null : (VENUES[template.venueSlug] ?? null),
+    venue: template.venueSlug === null ? null : venueBySlug(template.venueSlug),
     organizer:
       template.organizerName === null
         ? null

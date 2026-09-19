@@ -44,6 +44,7 @@ export interface GeoPoint {
 }
 
 export interface VenueSummary {
+  readonly slug: string;
   readonly name: string;
   readonly address: string;
   readonly location: GeoPoint;

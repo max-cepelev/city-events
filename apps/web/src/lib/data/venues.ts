@@ -4,7 +4,7 @@ import type { VenueSummary } from "$lib/types";
  * Реальные площадки Перми; адреса и координаты — best-effort для мок-данных,
  * при подключении импорта уточняются источниками.
  */
-export const VENUES: Readonly<Record<string, VenueSummary>> = {
+export const VENUES: Readonly<Record<string, Omit<VenueSummary, "slug">>> = {
   "teatr-teatr": {
     name: "Театр-Театр",
     address: "бул. Гагарина, 27А",
@@ -51,3 +51,8 @@ export const VENUES: Readonly<Record<string, VenueSummary>> = {
     location: { lon: 56.236, lat: 58.0085 }
   }
 };
+
+export function venueBySlug(slug: string): VenueSummary | null {
+  const venue = VENUES[slug];
+  return venue === undefined ? null : { slug, ...venue };
+}
