@@ -1,0 +1,27 @@
+{
+  "name": "@city-events/web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite dev",
+    "lint": "eslint src svelte.config.js vite.config.ts",
+    "preview": "vite preview",
+    "start": "node --env-file-if-exists=../../.env build/index.js",
+    "typecheck": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
+  },
+  "dependencies": {
+    "@city-events/api-client": "workspace:*",
+    "@city-events/shared": "workspace:*",
+    "better-auth": "1.7.5"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-node": "5.5.7",
+    "@sveltejs/kit": "2.70.3",
+    "@sveltejs/vite-plugin-svelte": "7.3.0",
+    "svelte": "5.57.1",
+    "svelte-check": "4.7.6",
+    "vite": "8.3.0"
+  }
+}

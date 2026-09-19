@@ -1,0 +1,33 @@
+{
+  "name": "city-events",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.33.2",
+  "engines": {
+    "node": ">=24 <27",
+    "pnpm": ">=10 <11"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "check": "pnpm lint && pnpm typecheck && pnpm test && pnpm build",
+    "dev": "turbo run dev --parallel",
+    "dev:infra": "docker compose -f infra/compose.yaml up -d",
+    "dev:infra:down": "docker compose -f infra/compose.yaml down",
+    "db:generate": "pnpm --filter @city-events/db db:generate",
+    "db:migrate": "pnpm --filter @city-events/db db:migrate",
+    "db:seed": "pnpm --filter @city-events/db db:seed",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "typecheck": "turbo run typecheck"
+  },
+  "devDependencies": {
+    "@types/node": "24.13.6",
+    "eslint": "10.11.0",
+    "eslint-plugin-svelte": "3.23.0",
+    "globals": "17.12.0",
+    "turbo": "2.11.2",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.70.0"
+  }
+}

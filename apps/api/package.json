@@ -1,0 +1,27 @@
+{
+  "name": "@city-events/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "node --env-file-if-exists=../../.env --watch --import tsx src/server.ts",
+    "lint": "eslint src test",
+    "start": "node --env-file-if-exists=../../.env dist/server.js",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@city-events/auth": "workspace:*",
+    "@city-events/db": "workspace:*",
+    "@city-events/fastify-plugins": "workspace:*",
+    "@city-events/queue": "workspace:*",
+    "@city-events/shared": "workspace:*",
+    "fastify": "5.12.5",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "tsx": "4.23.13",
+    "vitest": "5.0.1"
+  }
+}

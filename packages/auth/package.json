@@ -1,0 +1,33 @@
+{
+  "name": "@city-events/auth",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./permissions": {
+      "types": "./dist/permissions.d.ts",
+      "import": "./dist/permissions.js"
+    }
+  },
+  "scripts": {
+    "auth:schema": "auth generate --config src/cli.ts --output ../db/src/schema/auth.ts --adapter drizzle --dialect postgresql --yes",
+    "build": "tsc -p tsconfig.json",
+    "lint": "eslint src",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@better-auth/drizzle-adapter": "1.7.5",
+    "@city-events/db": "workspace:*",
+    "better-auth": "1.7.5",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "auth": "1.7.5",
+    "vitest": "5.0.1"
+  }
+}
