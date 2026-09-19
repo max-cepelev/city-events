@@ -1,6 +1,8 @@
 <script lang="ts">
   import { LngLatBounds, type Map as MaplibreMap } from "maplibre-gl";
   import { MapLibre, Marker, Popup } from "svelte-maplibre-gl";
+  // Явно задаёт URL воркера через Vite-пайплайн (SSR-safe: внутри guard по window).
+  import "svelte-maplibre-gl/vite";
   import "maplibre-gl/dist/maplibre-gl.css";
 
   import { resolve } from "$app/paths";

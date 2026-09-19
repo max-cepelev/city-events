@@ -1,5 +1,7 @@
 <script lang="ts">
   import { MapLibre, Marker } from "svelte-maplibre-gl";
+  // Явно задаёт URL воркера через Vite-пайплайн (SSR-safe: внутри guard по window).
+  import "svelte-maplibre-gl/vite";
   import "maplibre-gl/dist/maplibre-gl.css";
 
   import type { VenueSummary } from "$lib/types";
